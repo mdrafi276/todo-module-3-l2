@@ -20,21 +20,21 @@ const AddTodoModal = () => {
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="name" className="text-right">
-                            Name
+                        <Label htmlFor="task" className="text-right">
+                            Task
                         </Label>
                         <Input
-                            id="name"
+                            id="task"
 
                             className="col-span-3"
                         />
                     </div>
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="username" className="text-right">
-                            Username
+                        <Label htmlFor="discription" className="text-right">
+                            Discription
                         </Label>
                         <Input
-                            id="username"
+                            id="discription"
                             className="col-span-3"
                         />
                     </div>
