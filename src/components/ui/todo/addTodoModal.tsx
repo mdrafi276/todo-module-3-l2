@@ -25,7 +25,7 @@ const AddTodoModal = () => {
                         </Label>
                         <Input
                             id="name"
-                            defaultValue="Pedro Duarte"
+
                             className="col-span-3"
                         />
                     </div>
@@ -35,7 +35,6 @@ const AddTodoModal = () => {
                         </Label>
                         <Input
                             id="username"
-                            defaultValue="@peduarte"
                             className="col-span-3"
                         />
                     </div>
