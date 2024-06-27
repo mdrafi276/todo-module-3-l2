@@ -1,15 +1,17 @@
 import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
-import React from 'react';
 import { Button } from '../button';
+import React from 'react';
 
-const todoFilter = () => {
+const TodoFilter = () => {
+    const [position, setPosition] = React.useState("bottom")
+
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button variant="outline">Open</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-                <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
+                <DropdownMenuLabel>Filter by priority</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
                     <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
@@ -21,4 +23,4 @@ const todoFilter = () => {
     );
 };
 
-export default todoFilter;
+export default TodoFilter;

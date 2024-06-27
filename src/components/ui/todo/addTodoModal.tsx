@@ -1,21 +1,21 @@
-import React from 'react';
 import { DialogFooter, DialogHeader } from '../dialog';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@radix-ui/react-dialog';
 import { Button } from '../button';
 import { Label } from '@radix-ui/react-label';
 import { Input } from '../input';
 
-const addTodoModal = () => {
+const AddTodoModal = () => {
+
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="outline">Edit Profile</Button>
+                <Button className="bg-primary-gradient font-semibold text-xl rounded-md text-white">Add Todo</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
-                    <DialogTitle>Edit profile</DialogTitle>
+                    <DialogTitle>Add task</DialogTitle>
                     <DialogDescription>
-                        Make changes to your profile here. Click save when you're done.
+                        Add your task that you want to finish.
                     </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
@@ -48,4 +48,4 @@ const addTodoModal = () => {
     );
 };
 
-export default addTodoModal;
+export default AddTodoModal;
