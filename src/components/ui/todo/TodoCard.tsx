@@ -1,7 +1,12 @@
 import React from 'react';
 import { Button } from '../button';
 
-const TodoCard = () => {
+
+type TTodoCArdProps = {
+    title: string;
+    description: string;
+}
+const TodoCard: TTodoCArdProps = () => {
     return (
         <div className="bg-white border rounded-md flex justify-between items-center p-5">
             <input type="checkbox" name="" id="" />
