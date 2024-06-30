@@ -11,10 +11,13 @@ export const baseApi = createApi({
             }),
         }),
         addTodo: builder.muatation({
-            query: (categoryName) => ({
-                url: '/tasks',
-                method: 'POST',
-                body: { category: categoryName }
+            query: (data) => ({
+                console.log("inside base api", data);
+                return {
+                    url: '/tasks',
+                    method: 'POST',
+                    body: data
+                }
             })
         })
     })
