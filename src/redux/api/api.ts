@@ -9,16 +9,18 @@ export const baseApi = createApi({
                 url: '/tasks',
                 method: 'GET',
             }),
+            providesTags: ['todo'],
         }),
         addTodo: builder.muatation({
-            query: (data) => ({
-                console.log("inside base api", data);
+            query: (data) => {
+                console.log("inside base api", data)
                 return {
                     url: '/tasks',
                     method: 'POST',
                     body: data
                 }
-            })
+            },
+            invalidatesTags: ['todo']
         })
     })
 })
