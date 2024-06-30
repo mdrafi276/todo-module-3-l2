@@ -2,8 +2,8 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuRadio
 import { Button } from '../button';
 import React from 'react';
 
-const TodoFilter = () => {
-    const [position, setPosition] = React.useState("bottom")
+const TodoFilter = ({ priority, setPriority }) => {
+
 
     return (
         <DropdownMenu>
@@ -13,7 +13,7 @@ const TodoFilter = () => {
             <DropdownMenuContent className="w-56">
                 <DropdownMenuLabel>Filter by priority</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+                <DropdownMenuRadioGroup value={priority} onValueChange={setPriority}>
                     <DropdownMenuRadioItem value="high">High</DropdownMenuRadioItem>
                     <DropdownMenuRadioItem value="medium">Medium</DropdownMenuRadioItem>
                     <DropdownMenuRadioItem value="low">Low</DropdownMenuRadioItem>
