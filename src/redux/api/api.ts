@@ -5,10 +5,17 @@ export const baseApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
     endpoint: (builder) => ({
         getTodos: builder.query({
-            query: () => {
+            query: () => ({
                 url: '/tasks',
-                    method: 'GET'
-            }
+                method: 'GET',
+            }),
+        }),
+        addTodo: builder.muatation({
+            query: (categoryName) => ({
+                url: '/tasks',
+                method: 'POST',
+                body: { category: categoryName }
+            })
         })
     })
 })

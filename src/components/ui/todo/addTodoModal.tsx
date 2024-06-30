@@ -4,21 +4,24 @@ import { Button } from '../button';
 import { Label } from '@radix-ui/react-label';
 import { Input } from '../input';
 import { FormEvent, useState } from 'react';
-import { useAppDispatch } from '../../../redux/hooks';
-import { addTodo } from '../../../redux/features/todoSlice';
+// import { useAppDispatch } from '../../../redux/hooks';
+// import { addTodo } from '../../../redux/features/todoSlice';
 
 const AddTodoModal = () => {
     const [task, setTask] = useState('')
     const [Description, setDescription] = useState('')
-    const dispatch = useAppDispatch()
+    // const dispatch = useAppDispatch()
+
+    const [addTodo, { data, isLoading, isError, isSuccess }] = useAddTodoMutation()
     const onsubmit = (e: FormEvent) => {
         e.preventDefault();
-        const randomString = Math.random().toString(36).substring(2, 7)
+        // const randomString = Math.random().toString(36).substring(2, 7)
         const taskDetails = {
             title: task,
             description: description
         }
-        dispatch(addTodo(task))
+        // dispatch(addTodo(task))
+        addTodo(taskDetails)
     }
 
     return (
